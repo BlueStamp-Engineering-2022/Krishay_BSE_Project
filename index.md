@@ -1,4 +1,4 @@
-﻿# Project Name/Title Goes Here
+﻿# Security Camera
 My intensive project is a security camera that can detect objects. Whenever an object is detected, an email is sent to a given address.
 
 | **Engineer** | **School** | **Area of Interest** | **Grade** |
