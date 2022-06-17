@@ -1,5 +1,5 @@
 ﻿# Project Name/Title Goes Here
-This will serve as a brief description of your project. Limit this to three sentences because it can become overly long at that point. This copy should draw the user in and make she/him want to read more.
+My intensive project is a security camera that can detect objects. Whenever an object is detected, an email is sent to a given address.
 
 | **Engineer** | **School** | **Area of Interest** | **Grade** |
 |:--:|:--:|:--:|:--:|
