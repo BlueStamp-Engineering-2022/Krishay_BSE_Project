@@ -25,4 +25,4 @@ My first milestone was setting up and hooking up the Raspberry Pi and all the ne
 # Starter Project
 My starter project was the Simon Says Game. I soldered different parts, such as LEDs, capacitors, an IC, battery connectors, and a resistor. I enjoyed soldering the components, but I struggled with cutting the excess wire left after soldering. One thing that I found helpful was to stop pulling the wire and start using more pressure to actually cut the wire.
 
-[![Starter Project](https://res.cloudinary.com/marcomontalbano/image/upload/v1612574117/video_to_markdown/images/youtube--CaCazFBhYKs-c05b58ac6eb4c4700831b2b3070cd403.jpg)](https://www.youtube.com/watch?v=CaCazFBhYKs "First Milestone"){:target="_blank" rel="noopener"}
+[![Starter Project](https://i3.ytimg.com/vi/fECUJAkhwLc/maxresdefault.jpg)](https://www.youtube.com/watch?v=fECUJAkhwLc "First Milestone"){:target="_blank" rel="noopener"}
