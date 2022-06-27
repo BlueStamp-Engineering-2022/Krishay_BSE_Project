@@ -1,2 +1,1 @@
-To edit your portfolio, please go over to the gh_pages branch!
-Name: FirstName_BSE_Portfolio
+Hi, my name is Krishay, and I'm building the security camera using a Raspberry Pi.
