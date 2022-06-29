@@ -20,7 +20,7 @@ My final milestone is the increased reliability and accuracy of my robot. I amel
 # First Milestone
 The first milestone of my project was mainly about setting the Raspberry Pi up and installing all the necessary components. I also worked on the design and the casing of the project, and I modified it to use a Raspberry Pi 3 rather than a Raspberry Pi Zero W. The Zero was too slow, and it took too long to install the necessary dependencies for the project (OpenCV took 9 - 12 hours to compile on it). Additionally, there were some issues with the version of the software that was installed on it. Anyways, for this milestone, I mentioned before that I used a new case. The case is transparent so that you can see the components inside, but I still haven't decided whether I want to paint over it or not. I attached the camera to the case with velcro, and I taped down the ribbon cable so that it wouldn't move when the project was on.
 
-[![First Milestone](https://res.cloudinary.com/marcomontalbano/image/upload/v1612574117/video_to_markdown/images/youtube--CaCazFBhYKs-c05b58ac6eb4c4700831b2b3070cd403.jpg)](https://www.youtube.com/watch?v=CaCazFBhYKs "First Milestone"){:target="_blank" rel="noopener"}
+[![First Milestone](https://i3.ytimg.com/vi/TFgZT7W35SY/maxresdefault.jpg)](https://www.youtube.com/watch?v=TFgZT7W35SY "First Milestone")
 
 # Starter Project
 My starter project was the Simon Says Game. I soldered different parts, such as LEDs, capacitors, an IC, battery connectors, and a resistor. I enjoyed soldering the components, but I struggled with cutting the excess wire left after soldering. One thing that I found helpful was to stop pulling the wire and start using more pressure to actually cut the wire.
