@@ -1,0 +1,42 @@
+<html>
+<head>
+    <title>Pi Security Feed</title>
+
+    <!-- CSS for styling this site -->
+    <style>
+        * {
+            background-color: black;
+        }
+
+        .main-title {
+            color: white;
+            font-size: 3em;
+        }
+
+        a {
+            color: white;
+            font-size: 1.5em;
+            text-decoration: none;
+        }
+
+        a:hover {
+            opacity: 0.5;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Main title of site -->
+    <h1 class="main-title">Raspberry Pi Security Feed</h1>
+
+    <!-- Security Feed Stream -->
+    <img id="bg" src="{{ url_for('video_feed') }}">
+
+    <!-- Links in an unordered list -->
+    <ul>
+        <li><a href="https://github.com/BlueStamp-Engineering-2022/Krishay_BSE_Project">View GitHub Repository</a></li>
+        <li><a href="https://bluestamp-engineering-2022.github.io/Krishay_BSE_Project/">View Website</a></li>
+    </ul>
+</body>
+</html>
