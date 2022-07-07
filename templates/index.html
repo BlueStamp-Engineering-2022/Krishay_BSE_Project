@@ -4,40 +4,87 @@
 
     <!-- CSS for styling this site -->
     <style>
+        /* Style for everything on the webpage */
         * {
-            background-color: black;
+            box-sizing: border-box;
             text-align: center;
+            margin: 0;
         }
 
-        .main-title {
+        /* Style for the header "Raspberry Pi Security Feed" */
+        header {
+            background-color: rgb(50, 50, 50);
+            padding: 20px;
+            width: 100%;
+            margin-top: 1em;
+            margin-bottom: 1em;
             color: white;
-            font-size: 3em;
+            font-size: 2em;
         }
 
+        /* Adds a color and removes underline for hyperlinks */
         a {
-            color: white;
-            font-size: 1.5em;
+            color: rgb(139, 215, 217);
             text-decoration: none;
         }
 
+        /* When hyperlinks are hovered over, they become less opaque and they have an underline */
         a:hover {
             opacity: 0.5;
             text-decoration: underline;
         }
+
+        /* Style for the paragraphs of text on the website */
+        p {
+            color: white;
+            font-size: 1.2em;
+            padding: 2em;
+        }
+
+        /* Style for the unordered list */
+        ul {
+            list-style: none;
+            color: white;
+            font-size: 1.7em;
+            text-decoration: none;
+        }
+
+        /* Style for the bullet points of the unordered list */
+        ul li::before {
+            content: "\2022";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
+            color: rgb(208, 246, 248); /* Changes the color */
+            font-weight: bold; /* If it's bold */
+            display: inline-block; /* Needed to add space between the bullet and the text */
+            width: 1em; /* Also needed for space */
+            margin-left: -1em; /* Also needed for space */;
+        }
     </style>
 </head>
 
-<body>
+<body style="background-color: black;">
     <!-- Main title of site -->
-    <h1 class="main-title">Raspberry Pi Security Feed</h1>
+    <header>
+        <h1>Raspberry Pi Security Feed</h1>
+    </header>
 
-    <!-- Security Feed Stream -->
-    <img id="bg" src="{{ url_for('video_feed') }}">
+    <section>
+        <nav>
+            <!-- Links in an unordered list -->
+            <ul>
+                <li><a href="https://github.com/BlueStamp-Engineering-2022/Krishay_BSE_Project">View GitHub Repository</a></li>
+                <li><a href="https://bluestamp-engineering-2022.github.io/Krishay_BSE_Project/">View Website</a></li>
+            </ul>
+        </nav>
 
-    <!-- Links in an unordered list -->
-    <ul>
-        <li><a href="https://github.com/BlueStamp-Engineering-2022/Krishay_BSE_Project">View GitHub Repository</a></li>
-        <li><a href="https://bluestamp-engineering-2022.github.io/Krishay_BSE_Project/">View Website</a></li>
-    </ul>
+        <article>
+            <!-- Information about the project -->
+            <p>This project mainly uses the Raspberry Pi 3, OpenCV, and Python. The camera module<br>is the <a href="https://www.google.com/search?client=firefox-b-1-d&q=Raspberry+Pi+Rev+1.3">Raspberry Pi
+                Rev 1.3</a>, the version of <a href="https://www.python.org/downloads/release/python-2718/">Python is 2.7</a>, and the version of <a href="https://github.com/opencv/opencv/releases/tag/3.1.0">OpenCV is 3.1.0</a>.
+            </p>
+
+            <!-- Security Feed Stream -->
+            <img id="bg" src="{{ url_for('video_feed') }}">
+        </article>
+    </section>
 </body>
 </html>
