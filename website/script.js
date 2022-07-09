@@ -32,8 +32,8 @@ function turnOn() {
     readFile();
 }
 
-function writeToFile(text) {
-
+function writeToFile(_text) {
+  // TODO: write to the file
 }
 
 function readFile() {
