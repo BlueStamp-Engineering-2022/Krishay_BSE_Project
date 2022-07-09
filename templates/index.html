@@ -25,6 +25,7 @@
         nav ul {
             list-style-type: none;
             padding: 0;
+            padding-left: 20px;
         }
 
         /* Creates the section for the main content on the right */
@@ -63,6 +64,12 @@
             text-align: center;
         }
 
+        /* Styles the "Links & Controls" heading */
+        h2 {
+            text-decoration: underline;
+            margin-bottom: 20px;
+        }
+
         /* Adds a color and removes underline for hyperlinks */
         a {
             color: rgb(139, 215, 217);
@@ -97,6 +104,111 @@
                 height: auto;
             }
         }
+
+        /* Popup container for turning OFF */
+        .turn-off {
+            position: relative;
+            display: inline-block;
+            cursor: pointer;
+            color: rgb(237, 100, 100);
+            background-color: rgb(71, 46, 46);
+            padding: 20px 80px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        /* The actual popup (appears on top) */
+        .turn-off .turnOffPopupText {
+            visibility: hidden;
+            width: 160px;
+            background-color: #555;
+            color: #fff;
+            text-align: center;
+            border-radius: 6px;
+            padding: 8px 0;
+            position: absolute;
+            z-index: 1;
+            bottom: 125%;
+            left: 50%;
+            margin-left: -70px;
+        }
+
+        /* Popup arrow */
+        .turn-off .turnOffPopupText::after {
+            content: "";
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            margin-left: -5px;
+            border-width: 5px;
+            border-style: solid;
+            border-color: #555 transparent transparent transparent;
+        }
+
+        /* Toggle this class when clicking on the popup container (hide and show the popup) */
+        .turn-off .show {
+            visibility: visible;
+            -webkit-animation: fadeIn 1s;
+            animation: fadeIn 1s
+        }
+
+        /* Popup container for turning ON */
+        .turn-on {
+            position: relative;
+            display: inline-block;
+            cursor: pointer;
+            color: rgb(155, 237, 100);
+            background-color: rgb(46, 71, 57);
+            padding: 20px 80px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        /* The actual popup (appears on top) */
+        .turn-on .turnOnPopupText {
+            visibility: hidden;
+            width: 160px;
+            background-color: #555;
+            color: #fff;
+            text-align: center;
+            border-radius: 6px;
+            padding: 8px 0;
+            position: absolute;
+            z-index: 1;
+            bottom: 125%;
+            left: 50%;
+            margin-left: -70px;
+        }
+
+        /* Popup arrow */
+        .turn-on .turnOnPopupText::after {
+            content: "";
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            margin-left: -5px;
+            border-width: 5px;
+            border-style: solid;
+            border-color: #555 transparent transparent transparent;
+        }
+
+        /* Toggle this class when clicking on the popup container (hide and show the popup) */
+        .turn-on .show {
+            visibility: visible;
+            -webkit-animation: fadeIn 1s;
+            animation: fadeIn 1s
+        }
+
+        /* Add animation (fade in the popup) */
+        @-webkit-keyframes fadeIn {
+            from {opacity: 0;}
+            to {opacity: 1;}
+        }
+
+        @keyframes fadeIn {
+            from {opacity: 0;}
+            to {opacity:1 ;}
+        }
     </style>
 </head>
 
@@ -110,9 +222,17 @@
         <nav>
             <!-- Links in an unordered list -->
             <ul>
-                <h2>Links</h2>
+                <h2>Links & Controls</h2>
+
                 <li><a href="https://github.com/BlueStamp-Engineering-2022/Krishay_BSE_Project">GitHub Repository</a></li>
                 <li><a href="https://bluestamp-engineering-2022.github.io/Krishay_BSE_Project/">Website</a></li>
+                
+                <div class="turn-off" onclick="turnOff()">Power off
+                    <span class="turnOffPopupText" id="turnOffPopup">Camera is off</span>
+                </div>
+                <div class="turn-on" onclick="turnOn()">Power on
+                    <span class="turnOnPopupText" id="turnOnPopup">Camera is on</span>
+                </div>
             </ul>
         </nav>
 
@@ -126,5 +246,24 @@
             <img id="bg" src="{{ url_for('video_feed') }}">
         </article>
     </section>
+
+    <script>
+        // When the user clicks on <div>, open the popup
+        let isOn = true;
+
+        function turnOff() {
+            const popup = document.getElementById("turnOffPopup");
+            popup.classList.toggle("show");
+            // TODO: Stop python script
+            counter++;
+        }
+
+        function turnOn() {
+            const popup = document.getElementById("turnOnPopup");
+            popup.classList.toggle("show");
+            // TODO: Start python script
+            counter++;
+        }
+        </script>
 </body>
 </html>
