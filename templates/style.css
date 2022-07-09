@@ -1,0 +1,216 @@
+/* Style for everything on the webpage */
+* {
+    box-sizing: border-box;
+    text-align: left;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Creates the section for the links on the left */
+nav {
+    float: left;
+    width: 30%;
+    padding: 20px;
+    background-color: rgb(21, 21, 21);
+    height: 100vh;
+}
+
+/* Style the list inside the menu */
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    padding-left: 20px;
+}
+
+/* Creates the section for the main content on the right */
+article {
+    float: left;
+    padding: 20px;
+    width: 70%;
+    text-align: center;
+    background-color: rgb(33, 33, 33);
+    height: 100vh;
+}
+
+/* Adds a text align to the description */
+p {
+    text-align: center;
+}
+
+/* Clear floats after the columns */
+section::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Style for the header "Raspberry Pi Security Feed" */
+header {
+    background-color: black;
+    padding: 20px;
+    width: 100%;
+    color: white;
+    font-size: 2em;
+}
+
+/* Text align for the header "Raspberry Pi Security Feed" */
+h1 {
+    text-align: center;
+}
+
+/* Styles the "Links & Controls" heading */
+h2 {
+    text-decoration: underline;
+    margin-bottom: 20px;
+}
+
+/* Adds a color and removes underline for hyperlinks */
+a {
+    color: rgb(139, 215, 217);
+    text-decoration: none;
+}
+
+/* When hyperlinks are hovered over, they become more transparent and they have an underline */
+a:hover {
+    opacity: 0.5;
+    text-decoration: underline;
+}
+
+/* Style for the paragraphs of text on the website */
+p {
+    color: white;
+    font-size: 1.2em;
+    padding: 2em;
+}
+
+/* Style for the unordered list */
+ul {
+    list-style: none;
+    color: white;
+    font-size: 1.7em;
+    text-decoration: none;
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other, on small screens */
+@media (max-width: 600px) {
+    nav, article {
+        width: 100%;
+        height: auto;
+    }
+}
+
+/* Popup container for turning OFF */
+.turn-off {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    color: rgb(237, 100, 100);
+    background-color: rgb(71, 46, 46);
+    padding: 20px 80px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+/* The actual popup (appears on top) */
+.turn-off .turnOffPopupText {
+    visibility: hidden;
+    width: 160px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 8px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -70px;
+}
+
+/* Popup arrow */
+.turn-off .turnOffPopupText::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+
+/* Toggle this class when clicking on the popup container (hide and show the popup) */
+.turn-off .show {
+    visibility: visible;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s
+}
+
+/* Popup container for turning ON */
+.turn-on {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    color: rgb(155, 237, 100);
+    background-color: rgb(46, 71, 57);
+    padding: 20px 80px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+/* The actual popup (appears on top) */
+.turn-on .turnOnPopupText {
+    visibility: hidden;
+    width: 160px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 8px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -70px;
+}
+
+/* Popup arrow */
+.turn-on .turnOnPopupText::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+
+/* Toggle this class when clicking on the popup container (hide and show the popup) */
+.turn-on .show {
+    visibility: visible;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s
+}
+
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+/* Add animation (fade out the popup) */
+@-webkit-keyframes fadeOut {
+    from {opacity: 1;}
+    to {opacity: 0;}
+}
+
+@keyframes fadeOut {
+    from {opacity: 1;}
+    to {opacity: 0;}
+}
