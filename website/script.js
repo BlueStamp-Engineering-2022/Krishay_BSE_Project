@@ -12,7 +12,7 @@ function turnOff() {
     // Overwrite powerData.txt with "off"
     writeToFile("off");
 
-    // Read and print powerData.txt
+    // Read and print powerData.txt to check if data was correctly written
     readFile();
 }
 
@@ -28,7 +28,7 @@ function turnOn() {
     // Overwrite powerData.txt with "on'
     writeToFile("on");
 
-    // Read and print powerData.txt
+    // Read and print powerData.txt to check if data was correctly written
     readFile();
 }
 
