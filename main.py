@@ -7,11 +7,16 @@ from flask_basicauth import BasicAuth
 import time
 import threading
 
-email_update_interval = 30 # sends an email only once in this time interval
-video_camera = VideoCamera(flip=True) # creates a camera object, flip vertically
-object_classifier = cv2.CascadeClassifier("models/facial_recognition_model.xml") # an opencv classifier
+# Sends an email only once in this time interval
+email_update_interval = 30
 
-# App Global (do not edit)
+# Creates a camera object, flip vertically
+video_camera = VideoCamera(flip=True)
+
+# Adds the OpenCV classifier for recognizing objects
+object_classifier = cv2.CascadeClassifier("models/facial_recognition_model.xml")
+
+# App Global
 app = Flask(__name__)
 
 # Authentication for security feed
@@ -22,6 +27,7 @@ app.config['BASIC_AUTH_FORCE'] = True
 basic_auth = BasicAuth(app)
 last_epoch = 0
 
+# Continuously checks for objects
 def check_for_objects():
 	global last_epoch
 	while True:
@@ -35,22 +41,26 @@ def check_for_objects():
 		except:
 			print "Error sending email: ", sys.exc_info()[0]
 
+# Initializes website
 @app.route('/')
 @basic_auth.required
 def index():
     return render_template('index.html')
 
+# Gets each frame from the camera and adds that to the website
 def gen(camera):
     while True:
         frame = camera.get_frame()
         yield (b'--frame\r\n'
             b'Content-Type: image/jpeg\r\n\r\n' + frame + b'\r\n\r\n')
 
+# Initializes video feed
 @app.route('/video_feed')
 def video_feed():
     return Response(gen(video_camera),
                     mimetype='multipart/x-mixed-replace; boundary=frame')
 
+# Runs camera
 if __name__ == '__main__':
     t = threading.Thread(target=check_for_objects, args=())
     t.daemon = True

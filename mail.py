@@ -5,11 +5,14 @@ from email.MIMEImage import MIMEImage
 
 # Email to send security update from
 fromEmail = 'picamera23@gmail.com'
-fromEmailPassword = '-----------' # Placeholder for real password
+
+# Placeholder for real password for the email address to send the email
+fromEmailPassword = '-----------'
 
 # Email to send security update to
 toEmail = 'krishay.db@gmail.com'
 
+# Constructs the email and sends it
 def sendEmail(image):
 	msgRoot = MIMEMultipart('related')
 	msgRoot['Subject'] = 'Security Update'

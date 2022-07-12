@@ -1,3 +1,5 @@
+/* CSS file used on all pages */
+
 /* Style for everything on the webpage */
 * {
     box-sizing: border-box;
@@ -5,6 +7,22 @@
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
 }
+
+/* Adds a color and removes underline for hyperlinks */
+a {
+    color: rgb(139, 215, 217);
+    text-decoration: none;
+}
+
+/* Style for the paragraphs of text on the website */
+p {
+    color: white;
+    font-size: 1.2em;
+    padding: 2em;
+    text-align: center;
+}
+
+/* CSS file used in index.html */
 
 /* Creates the section for the links on the left */
 nav {
@@ -30,11 +48,6 @@ article {
     text-align: center;
     background-color: rgb(33, 33, 33);
     height: 100vh;
-}
-
-/* Adds a text align to the description */
-p {
-    text-align: center;
 }
 
 /* Clear floats after the columns */
@@ -64,23 +77,10 @@ h2 {
     margin-bottom: 20px;
 }
 
-/* Adds a color and removes underline for hyperlinks */
-a {
-    color: rgb(139, 215, 217);
-    text-decoration: none;
-}
-
 /* When hyperlinks are hovered over, they become more transparent and they have an underline */
 a:hover {
     opacity: 0.5;
     text-decoration: underline;
-}
-
-/* Style for the paragraphs of text on the website */
-p {
-    color: white;
-    font-size: 1.2em;
-    padding: 2em;
 }
 
 /* Style for the unordered list */
@@ -91,7 +91,18 @@ ul {
     text-decoration: none;
 }
 
-/* Responsive layout - makes the two columns stack on top of each other instead of next to each other, on small screens */
+/* Sets the color of the link to the current page */
+.current-page {
+    color: rgb(170, 255, 162);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other, on
+small screens */
 @media (max-width: 600px) {
     nav, article {
         width: 100%;
