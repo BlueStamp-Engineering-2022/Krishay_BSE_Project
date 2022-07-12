@@ -42,12 +42,9 @@ def index():
 
 def gen(camera):
     while True:
-        # Reads from the file and determines whether to get the camera frames
-        f = open("templates/powerData.txt", "r")
-        if f.read() == "on":
-            frame = camera.get_frame()
-            yield (b'--frame\r\n'
-                b'Content-Type: image/jpeg\r\n\r\n' + frame + b'\r\n\r\n')
+        frame = camera.get_frame()
+        yield (b'--frame\r\n'
+            b'Content-Type: image/jpeg\r\n\r\n' + frame + b'\r\n\r\n')
 
 @app.route('/video_feed')
 def video_feed():
