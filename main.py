@@ -6,6 +6,7 @@ from camera import VideoCamera
 from flask_basicauth import BasicAuth
 import time
 import threading
+import os
 
 # Sends an email only once in this time interval
 email_update_interval = 30
@@ -16,8 +17,12 @@ video_camera = VideoCamera(flip=True)
 # Adds the OpenCV classifier for recognizing objects
 object_classifier = cv2.CascadeClassifier("models/facial_recognition_model.xml")
 
-# App Global
+# Variable for the diagram image
+DIAGRAM_FOLDER = os.path.join('static', 'piDiagram')
+
+# App Globals
 app = Flask(__name__, template_folder='templates')
+app.config['UPLOAD_FOLDER'] = DIAGRAM_FOLDER
 
 # Authentication for security feed
 app.config['BASIC_AUTH_USERNAME'] = 'krishay'
@@ -46,6 +51,11 @@ def check_for_objects():
 @basic_auth.required
 def index():
     return render_template('index.html')
+
+@app.route('/design')
+def show_diagram():
+    diagram_path = os.path.join(app.config['UPLOAD_FOLDER'], 'piDiagram.png')
+    return render_template("design.html", user_image = diagram_path)
 
 @app.route('/design')
 def design():
