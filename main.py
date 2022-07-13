@@ -47,20 +47,20 @@ def check_for_objects():
 def index():
     return render_template('index.html')
 
-@app.route('/other_html')
-def index():
+@app.route('/other_html/')
+def camerapy():
     return render_template('camerapy.html')
 
-@app.route('/other_html')
-def index():
+@app.route('/other_html/')
+def design():
     return render_template('design.html')
 
-@app.route('/other_html')
-def index():
+@app.route('/other_html/')
+def mailpy():
     return render_template('mailpy.html')
 
-@app.route('/other_html')
-def index():
+@app.route('/other_html/')
+def mainpy():
     return render_template('mainpy.html')
 
 # Gets each frame from the camera and adds that to the website
