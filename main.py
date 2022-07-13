@@ -17,7 +17,7 @@ video_camera = VideoCamera(flip=True)
 object_classifier = cv2.CascadeClassifier("models/facial_recognition_model.xml")
 
 # App Global
-app = Flask(__name__)
+app = Flask(__name__, template_folder='templates')
 
 # Authentication for security feed
 app.config['BASIC_AUTH_USERNAME'] = 'krishay'
@@ -47,19 +47,19 @@ def check_for_objects():
 def index():
     return render_template('index.html')
 
-@app.route('/other_html/')
-def camerapy():
-    return render_template('camerapy.html')
-
-@app.route('/other_html/')
+@app.route('/design')
 def design():
     return render_template('design.html')
 
-@app.route('/other_html/')
+@app.route('/camerapy')
+def camerapy():
+    return render_template('camerapy.html')
+
+@app.route('/mailpy')
 def mailpy():
     return render_template('mailpy.html')
 
-@app.route('/other_html/')
+@app.route('/mainpy')
 def mainpy():
     return render_template('mainpy.html')
 
@@ -75,6 +75,8 @@ def gen(camera):
 def video_feed():
     return Response(gen(video_camera),
                     mimetype='multipart/x-mixed-replace; boundary=frame')
+
+
 
 # Runs camera
 if __name__ == '__main__':
