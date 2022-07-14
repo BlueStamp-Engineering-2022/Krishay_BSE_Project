@@ -8,9 +8,9 @@ My intensive project is a security camera that can detect objects. Whenever an o
 ![Headstone Image](https://lh3.googleusercontent.com/pw/AM-JKLXy2klahyAIz2o7mgkTVH0u-7OgaZBzQGnpf8aVb_5nBiMW_FtDSkUv1IisumtI6D5aNSJ0xxLc4lyffsc1yyuXrR_T8_3izLDECbOhrL5PGLE5nJunmBj91IMAzj6m8vLIe1SYGGOqJAZn1GqPoiI=s914-no?authuser=0)
   
 # Final Milestone
-My final milestone is the increased reliability and accuracy of my robot. I ameliorated the sagging and fixed the reliability of the finger. As discussed in my second milestone, the arm sags because of weight. I put in a block of wood at the base to hold up the upper arm; this has reverberating positive effects throughout the arm. I also realized that the forearm was getting disconnected from the elbow servo’s horn because of the weight stress on the joint. Now, I make sure to constantly tighten the screws at that joint.
+In this last milestone, I added a modification, which was making a website to view the live security feed. This website helps users see what is exactly going on in the security camera's location, and it was made with HTML, CSS, and a Python framework called flask. In addition to the stream, it also has more information about the project. The code for the website can be found in the GitHub repository.
 
-[![Final Milestone](https://res.cloudinary.com/marcomontalbano/image/upload/v1612573869/video_to_markdown/images/youtube--F7M7imOVGug-c05b58ac6eb4c4700831b2b3070cd403.jpg )](https://www.youtube.com/watch?v=F7M7imOVGug&feature=emb_logo "Final Milestone")
+[![Final Milestone](https://i3.ytimg.com/vi/XpHH6P7srZo/maxresdefault.jpg)](https://www.youtube.com/watch?v=XpHH6P7srZo "Final Milestone")
 
 # Second Milestone
 The second milestone of this security camera project was about programming the camera and getting it to send emails, and I used Python to do this. Whenever a face is detected, the camera constructs an email and sends it to a given address. The object to be detected can also be changed to detect a full body, or just the upper body of a person. Also, the email function only works within a certain time interval of 30 seconds. If an object has been detected but an email has been sent within the previous 30 seconds, then no email is sent. This exists so that the user is not annoyed, and it can also be configured to a different time.
