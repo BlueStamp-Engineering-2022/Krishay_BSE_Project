@@ -3,7 +3,7 @@ My intensive project is a security camera that can detect objects. Whenever an o
 
 | **Engineer** | **School** | **Area of Interest** | **Grade** |
 |:--:|:--:|:--:|:--:|
-| Krishay Bhople | Monta Vista High School | Software Engineering | Incoming Sophomore
+| Krishay| Monta Vista High School | Software Engineering | Incoming Sophomore
 
 ![Headstone Image](https://lh3.googleusercontent.com/pw/AM-JKLXy2klahyAIz2o7mgkTVH0u-7OgaZBzQGnpf8aVb_5nBiMW_FtDSkUv1IisumtI6D5aNSJ0xxLc4lyffsc1yyuXrR_T8_3izLDECbOhrL5PGLE5nJunmBj91IMAzj6m8vLIe1SYGGOqJAZn1GqPoiI=s914-no?authuser=0)
   
